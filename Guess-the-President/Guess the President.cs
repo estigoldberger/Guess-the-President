@@ -27,7 +27,8 @@ namespace Match_the_President
             gv.DataSource = dt;
             gv.AllowUserToAddRows = false;
             gv.Font = new Font("Arial", 14);
-            gv.Margin = new(50, 40, 0, 10);
+            gv.Margin = new(40, 40, 0, 10);
+            
 
         }
         private DataTable GetDataTable(string sqlstatement)
@@ -77,60 +78,40 @@ namespace Match_the_President
             }
             return value;
         }
+        private void SetLabelProperties(string msg, Color clr)
+        {
+
+            lblMessage.Text = msg;
+            lblMessage.BackColor = Color.Silver;
+            lblMessage.ForeColor = clr;
+        }
 
         private void ShowResults()
         {
-            btnStart.Text = "Start";
+
             var dt = GetDataTable("select 'And the president is: '= concat(FirstName,' ', LastName) from president p where Num= " + txtNum.Text);
 
             string s = GetValueFromFirstRowAsString(dt, "And the president is: ");
 
-            if (s == txtGuess.Text)
+            if (txtGuess.Text.ToLower()==s.ToLower() || txtGuess.Text.ToUpper()==s.ToUpper())
             {
                 int l = 0;
                 bool bo = int.TryParse(lblPt.Text, out l);
                 lblPt.Text = (l + 1).ToString();
-                var response = MessageBox.Show("You guessed the president! Would you like to play again?", "", MessageBoxButtons.YesNo);
+                SetLabelProperties("You guessed the president! Great job!", Color.Yellow);
 
-                if (response == DialogResult.Yes)
-                {
-                    txtNum.Clear();
-                    ShowPresNum();
-
-                }
-                else
-                {
-
-                    MessageBox.Show("Your score is: " + lblPt.Text);
-                    this.Close();
-                }
             }
-            if (s != txtGuess.Text)
+            else
             {
-                var response = MessageBox.Show("Whoops! Would you like to try again?", "", MessageBoxButtons.YesNo);
-                if (response == DialogResult.Yes)
-                {
-                    txtNum.Clear();
-                    txtGuess.Clear();
-                    ShowPresNum();
-                }
-                else
-                {
-
-                    if (lblPt.Text == "")
-                    {
-                        MessageBox.Show("Try again next time!");
-                    }
-                    else MessageBox.Show("Your score is: " + lblPt.Text);
-                    this.Close();
-                }
-
+                SetLabelProperties("Whoops! Try again next time!", Color.Red);
             }
-            txtGuess.Clear();
+            
         }
         private void Button1_Click(object? sender, EventArgs e)
         {
+            txtGuess.Clear();
             ShowPresNum();
+            lblMessage.Text = "";
 
         }
         private void Button2_Click(object? sender, EventArgs e)

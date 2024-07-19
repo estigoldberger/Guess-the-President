@@ -42,6 +42,7 @@
             txtNum = new TextBox();
             txtGuess = new TextBox();
             lblAnswer = new Label();
+            lblMessage = new Label();
             tblMain.SuspendLayout();
             tblToolbar.SuspendLayout();
             tblGame.SuspendLayout();
@@ -57,15 +58,16 @@
             tblMain.Controls.Add(tblToolbar, 0, 0);
             tblMain.Controls.Add(tblGame, 0, 1);
             tblMain.Controls.Add(lblAnswer, 1, 1);
+            tblMain.Controls.Add(lblMessage, 1, 3);
             tblMain.Dock = DockStyle.Fill;
             tblMain.Location = new Point(0, 0);
             tblMain.Name = "tblMain";
             tblMain.RowCount = 4;
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 14F));
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 19.333334F));
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 66.6666641F));
-            tblMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
-            tblMain.Size = new Size(800, 450);
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 12.1452656F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 14.1491394F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 25.43021F));
+            tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 48.1894951F));
+            tblMain.Size = new Size(834, 523);
             tblMain.TabIndex = 0;
             // 
             // tblToolbar
@@ -90,7 +92,7 @@
             tblToolbar.Name = "tblToolbar";
             tblToolbar.RowCount = 1;
             tblToolbar.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tblToolbar.Size = new Size(794, 50);
+            tblToolbar.Size = new Size(828, 57);
             tblToolbar.TabIndex = 0;
             // 
             // btnStart
@@ -99,10 +101,10 @@
             btnStart.AutoSize = true;
             btnStart.BackColor = Color.Fuchsia;
             btnStart.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnStart.Location = new Point(57, 10);
+            btnStart.Location = new Point(66, 10);
             btnStart.Margin = new Padding(3, 10, 3, 3);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(96, 37);
+            btnStart.Size = new Size(96, 38);
             btnStart.TabIndex = 0;
             btnStart.Text = "&Start";
             btnStart.UseVisualStyleBackColor = false;
@@ -114,10 +116,10 @@
             btnAnswer.BackColor = Color.Fuchsia;
             btnAnswer.Enabled = false;
             btnAnswer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAnswer.Location = new Point(163, 10);
+            btnAnswer.Location = new Point(181, 10);
             btnAnswer.Margin = new Padding(3, 10, 3, 3);
             btnAnswer.Name = "btnAnswer";
-            btnAnswer.Size = new Size(146, 37);
+            btnAnswer.Size = new Size(146, 38);
             btnAnswer.TabIndex = 1;
             btnAnswer.Text = "&Reveal Answer";
             btnAnswer.UseVisualStyleBackColor = false;
@@ -128,7 +130,7 @@
             lblPoints.AutoSize = true;
             lblPoints.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPoints.ForeColor = Color.FromArgb(255, 128, 0);
-            lblPoints.Location = new Point(431, 12);
+            lblPoints.Location = new Point(459, 12);
             lblPoints.Margin = new Padding(3, 12, 3, 0);
             lblPoints.Name = "lblPoints";
             lblPoints.Size = new Size(65, 28);
@@ -140,7 +142,7 @@
             lblPt.AutoSize = true;
             lblPt.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPt.ForeColor = Color.FromArgb(255, 128, 0);
-            lblPt.Location = new Point(502, 12);
+            lblPt.Location = new Point(530, 12);
             lblPt.Margin = new Padding(3, 12, 3, 0);
             lblPt.Name = "lblPt";
             lblPt.Size = new Size(0, 28);
@@ -152,7 +154,7 @@
             lblTurns.AutoSize = true;
             lblTurns.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTurns.ForeColor = Color.FromArgb(255, 128, 0);
-            lblTurns.Location = new Point(646, 12);
+            lblTurns.Location = new Point(681, 12);
             lblTurns.Margin = new Padding(3, 12, 3, 0);
             lblTurns.Name = "lblTurns";
             lblTurns.Size = new Size(63, 28);
@@ -164,7 +166,7 @@
             lblTurn.AutoSize = true;
             lblTurn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblTurn.ForeColor = Color.FromArgb(255, 128, 0);
-            lblTurn.Location = new Point(715, 12);
+            lblTurn.Location = new Point(750, 12);
             lblTurn.Margin = new Padding(3, 12, 3, 0);
             lblTurn.Name = "lblTurn";
             lblTurn.Size = new Size(0, 28);
@@ -180,15 +182,15 @@
             tblGame.Controls.Add(txtNum, 0, 1);
             tblGame.Controls.Add(txtGuess, 0, 3);
             tblGame.Dock = DockStyle.Fill;
-            tblGame.Location = new Point(3, 59);
+            tblGame.Location = new Point(3, 66);
             tblGame.Name = "tblGame";
             tblGame.RowCount = 4;
-            tblMain.SetRowSpan(tblGame, 2);
+            tblMain.SetRowSpan(tblGame, 3);
             tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 22.25F));
             tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 28.5F));
             tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 9.763313F));
             tblGame.RowStyles.Add(new RowStyle(SizeType.Percent, 39.64497F));
-            tblGame.Size = new Size(377, 338);
+            tblGame.Size = new Size(394, 454);
             tblGame.TabIndex = 1;
             // 
             // lblNum
@@ -196,7 +198,7 @@
             lblNum.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             lblNum.AutoSize = true;
             lblNum.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNum.Location = new Point(60, 50);
+            lblNum.Location = new Point(60, 75);
             lblNum.Margin = new Padding(60, 5, 3, 0);
             lblNum.Name = "lblNum";
             lblNum.Size = new Size(122, 25);
@@ -207,7 +209,7 @@
             // 
             lblGuess.AutoSize = true;
             lblGuess.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGuess.Location = new Point(60, 176);
+            lblGuess.Location = new Point(60, 234);
             lblGuess.Margin = new Padding(60, 5, 3, 0);
             lblGuess.Name = "lblGuess";
             lblGuess.Size = new Size(103, 25);
@@ -220,11 +222,13 @@
             txtNum.BackColor = Color.Silver;
             txtNum.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             txtNum.ForeColor = Color.FromArgb(192, 255, 192);
-            txtNum.Location = new Point(60, 85);
+            txtNum.Location = new Point(60, 110);
             txtNum.Margin = new Padding(60, 10, 3, 3);
             txtNum.Name = "txtNum";
+            txtNum.ReadOnly = true;
             txtNum.Size = new Size(125, 43);
             txtNum.TabIndex = 0;
+            txtNum.TextAlign = HorizontalAlignment.Center;
             // 
             // txtGuess
             // 
@@ -232,28 +236,40 @@
             txtGuess.Dock = DockStyle.Fill;
             txtGuess.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
             txtGuess.ForeColor = Color.FromArgb(255, 192, 192);
-            txtGuess.Location = new Point(60, 206);
+            txtGuess.Location = new Point(60, 276);
             txtGuess.Margin = new Padding(60, 3, 20, 3);
             txtGuess.Name = "txtGuess";
-            txtGuess.Size = new Size(297, 38);
+            txtGuess.Size = new Size(314, 38);
             txtGuess.TabIndex = 1;
             // 
             // lblAnswer
             // 
             lblAnswer.AutoSize = true;
             lblAnswer.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
-            lblAnswer.Location = new Point(433, 86);
+            lblAnswer.Location = new Point(450, 93);
             lblAnswer.Margin = new Padding(50, 30, 3, 0);
             lblAnswer.Name = "lblAnswer";
             lblAnswer.Size = new Size(0, 38);
             lblAnswer.TabIndex = 2;
+            // 
+            // lblMessage
+            // 
+            lblMessage.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            lblMessage.AutoSize = true;
+            lblMessage.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMessage.Location = new Point(615, 270);
+            lblMessage.Margin = new Padding(40, 0, 10, 70);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(0, 183);
+            lblMessage.TabIndex = 3;
+            lblMessage.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Guess_the_President
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(834, 523);
             Controls.Add(tblMain);
             Name = "Guess_the_President";
             Text = "Guess_the_Presidentcs";
@@ -282,5 +298,6 @@
         private TextBox txtNum;
         private TextBox txtGuess;
         private Label lblAnswer;
+        private Label lblMessage;
     }
 }
