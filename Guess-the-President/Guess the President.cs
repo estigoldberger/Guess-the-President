@@ -93,7 +93,7 @@ namespace Match_the_President
 
             string s = GetValueFromFirstRowAsString(dt, "And the president is: ");
 
-            if (txtGuess.Text.ToLower()==s.ToLower() || txtGuess.Text.ToUpper()==s.ToUpper())
+            if (txtGuess.Text.ToLower()==s.ToLower() )
             {
                 int l = 0;
                 bool bo = int.TryParse(lblPt.Text, out l);
