@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guess-the-President App", "Guess-the-President App.csproj", "{ABE0D389-7E10-4A0C-8BC6-3786452FB52E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guess-the-President MAUI", "..\Guess-the-President MAUI\Guess-the-President MAUI.csproj", "{1844165B-1F3E-4557-BAC0-34A1CD424E3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{ABE0D389-7E10-4A0C-8BC6-3786452FB52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ABE0D389-7E10-4A0C-8BC6-3786452FB52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ABE0D389-7E10-4A0C-8BC6-3786452FB52E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1844165B-1F3E-4557-BAC0-34A1CD424E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1844165B-1F3E-4557-BAC0-34A1CD424E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1844165B-1F3E-4557-BAC0-34A1CD424E3E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1844165B-1F3E-4557-BAC0-34A1CD424E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1844165B-1F3E-4557-BAC0-34A1CD424E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1844165B-1F3E-4557-BAC0-34A1CD424E3E}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

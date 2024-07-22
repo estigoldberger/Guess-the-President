@@ -28,7 +28,7 @@ namespace Match_the_President
             gv.AllowUserToAddRows = false;
             gv.Font = new Font("Arial", 14);
             gv.Margin = new(40, 40, 0, 10);
-            
+
 
         }
         private DataTable GetDataTable(string sqlstatement)
@@ -93,7 +93,7 @@ namespace Match_the_President
 
             string s = GetValueFromFirstRowAsString(dt, "And the president is: ");
 
-            if (txtGuess.Text.ToLower()==s.ToLower() )
+            if (txtGuess.Text.ToLower() == s.ToLower())
             {
                 int l = 0;
                 bool bo = int.TryParse(lblPt.Text, out l);
@@ -105,7 +105,7 @@ namespace Match_the_President
             {
                 SetLabelProperties("Whoops! Try again next time!", Color.Red);
             }
-            
+
         }
         private void Button1_Click(object? sender, EventArgs e)
         {
